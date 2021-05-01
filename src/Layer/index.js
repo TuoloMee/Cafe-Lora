@@ -1,6 +1,7 @@
 import './style.css';
 
 export const Layer = (props) => {
+
   return `
     <div class="layer">
       <div class="layer__color"
@@ -8,4 +9,6 @@ export const Layer = (props) => {
       <div class="layer__label">${props.label}</div>
     </div>`
 };
+
+
 
