@@ -1,4 +1,6 @@
+
 import './style.css';
+
 
 console.log('funguju!');
 
@@ -23,6 +25,7 @@ navElmAll[i].addEventListener('click', () => {
 //     navElm.classList.add('nav-closed');
 //   });
 // });
+
 // Na tlačíko se třídou order-btn pověste posluchač, při kliknutí změní nápis na tlačítku na Zrušit. Zároveň přidá na prvek se třídou drink__cup třídu drink__cup--selected.
 // Při opětovném kliknutí na tlačítko chceme zařídit, aby se objednávka zrušila a změny na prvku .drink__cup i na tlačítku .order-btn se vrátily (odebrala se třída drink__cup--selected a vrátil se text tlačítka na Objednat). Tohoto můžete docílit například tak, že si vytvoříte globální proměnnou ordered, která bude obsahovat true nebo false podle toho, zde je nápoj objednaný či nikoliv.
 
@@ -41,3 +44,11 @@ orderBtn.addEventListener('click', () => {
   ordered = true
 }
 });
+// V hlavním souboru index.js vytvořte komponentu Layer, která očekává props v následujícím tvaru.Použijte vaši komponentu a pomocí vlastnosti innerHTML zapojte do stránky tři dané ingredience pro cappuccino. Stránka by měla pro uživatele vypadat stejně jako na začátku.
+const drinkInfo = document.querySelector('.drink__info')
+
+import {Layer} from './Layer/index.js';
+
+drinkInfo.innerHTML += Layer({ color: '#feeeca', label: 'mléčná pěna'});
+drinkInfo.innerHTML += Layer({ color: '#fed7b0', label: 'teplé mléko'});
+drinkInfo.innerHTML += Layer({ color: '#613916', label: 'espresso'});
